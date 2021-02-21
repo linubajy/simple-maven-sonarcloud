@@ -9,7 +9,7 @@
   <artifactId>simple-maven-sonarcloud</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>simple-maven-sonarqube</name>
+ <!-- <name>simple-maven-sonarqube</name> -->
    <name>simple-maven-sonarcloud</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
