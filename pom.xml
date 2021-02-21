@@ -5,10 +5,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.mindtree</groupId>
-  <artifactId>simple-maven-sonarqube</artifactId>
+  <!--<artifactId>simple-maven-sonarqube</artifactId> -->
+  <artifactId>simple-maven-sonarcloud</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
   <name>simple-maven-sonarqube</name>
+   <name>simple-maven-sonarcloud</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -19,7 +21,11 @@
     
     
 <!--   ADDING FROM SONARCLOUD REPO -->
-  <sonar.projectKey>linubajy_simple-maven-sonarqube</sonar.projectKey>
+<!--  <sonar.projectKey>linubajy_simple-maven-sonarqube</sonar.projectKey>
+  <sonar.organization>linubajy</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>  -->
+    
+    <sonar.projectKey>linubajy_simple-maven-sonarcloud</sonar.projectKey>
   <sonar.organization>linubajy</sonar.organization>
   <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     
