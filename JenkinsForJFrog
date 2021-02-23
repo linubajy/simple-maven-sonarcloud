@@ -15,12 +15,12 @@ pipeline {
                git branch: 'master', url: 'https://github.com/linubajy/simple-maven-sonarcloud.git'
             }
         }
-        stage('Compile')
+       /* stage('Compile')
       {
           steps 
           {
               sh 'echo Compile'
-              sh './mvnw compile'
+              sh 'mvn compile'
                  
            }
         }
@@ -29,10 +29,10 @@ pipeline {
           steps 
           {
               sh 'echo Build'
-              sh './mvnw  package'
+              sh 'mvn  package'
                  
            }
-        }
+        }*/
         stage('collect artifact'){
                 steps{
                     archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
