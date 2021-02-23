@@ -1,0 +1,49 @@
+pipeline {
+     agent any
+     stages
+     {
+      stage('Fetch')
+      {
+            steps 
+            {
+               
+               git branch: 'master', url: 'https://github.com/linubajy/simple-maven-sonarcloud.git'
+            }
+        }
+      stage('Build')
+      {
+          steps 
+          {
+              sh 'echo Build'
+              sh 'mvn  package'
+                 
+           }
+        }
+        stage('collect artifact'){
+                steps{
+                    archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
+                 }
+            }      
+         stage('deploy to artifactory')
+         {
+            steps{
+     
+                rtUpload (
+                    serverId: 'jfrog',
+                    spec: '''{
+                    "files": [
+                         {
+                             "pattern": "target/*.jar",
+                             "target": "art-doc-dev-loc-new/sample/"
+                        }
+                     ]
+                }''',
+ 
+  
+    buildName: 'Build1',
+    buildNumber: '1'
+)
+     }}
+      }
+      
+}      
