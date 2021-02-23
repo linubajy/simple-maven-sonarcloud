@@ -20,7 +20,7 @@ pipeline {
           steps 
           {
               sh 'echo Compile'
-              sh 'mvn compile'
+              sh './mvnw compile'
                  
            }
         }
@@ -29,7 +29,7 @@ pipeline {
           steps 
           {
               sh 'echo Build'
-              sh 'mvn  package'
+              sh './mvnw  package'
                  
            }
         }
