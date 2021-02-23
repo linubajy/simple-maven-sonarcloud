@@ -15,6 +15,15 @@ pipeline {
                git branch: 'master', url: 'https://github.com/linubajy/simple-maven-sonarcloud.git'
             }
         }
+         stage('Clean')
+      {
+          steps 
+          {
+              
+              sh 'mvn clean'
+                 
+           }
+        }
         stage('Compile')
       {
           steps 
